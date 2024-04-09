@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8998439461954828247, guid: c82b6d0dfee73064c94054480965aa28, type: 3}
+  controller: {fileID: 9164740932557787694}
 --- !u!1 &3524737836401214618
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +62,9 @@ GameObject:
   - component: {fileID: 2332733079263978488}
   - component: {fileID: 9164740932557787694}
   - component: {fileID: 2006058277058238966}
+  - component: {fileID: -2053029776197679392}
+  - component: {fileID: 427516218549503751}
+  - component: {fileID: 2318329628201469558}
   m_Layer: 0
   m_Name: UATankPlayer
   m_TagString: Player
@@ -167,7 +171,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -182,7 +186,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &2332733079263978488
 MonoBehaviour:
@@ -196,8 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377817189e53e164ba8231e6c8d422d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  turnSpeed: 2
+  moveSpeed: 5
+  turnSpeed: 3
   shooter: {fileID: 1451747877946077520}
 --- !u!114 &9164740932557787694
 MonoBehaviour:
@@ -228,3 +232,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d38d289a10d7244bf12130c143e89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2053029776197679392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524737836401214618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dad93dd08337874f9e49da69830586c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 25
+  spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
+  playOnDamage: {fileID: 0}
+--- !u!114 &427516218549503751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524737836401214618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e65260140cf7c47b2778a92f2f56b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+--- !u!114 &2318329628201469558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524737836401214618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e209cc837881764f917759b52ad923d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockOnInput: 304

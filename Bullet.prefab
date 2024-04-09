@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 10
   deathTime: 3
-  damage: 1
+  damage: 5
   explosion: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
 --- !u!82 &6671517531508776507
 AudioSource:

@@ -16,4 +16,8 @@ public abstract class Pawn : MonoBehaviour
     public abstract void MoveBackward();
     public abstract void TurnLeft();
     public abstract void TurnRight();
+    public virtual void OnDestroy()
+    {
+        GameManager.gm.tanks.Remove(this);
+    }
 }

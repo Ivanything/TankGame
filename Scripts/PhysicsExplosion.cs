@@ -16,10 +16,19 @@ public class PhysicsExplosion : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider c in hits)
         {
+            MakeSound(c);
             if (!c.attachedRigidbody) continue;
 
             Vector3 explosionForce = (c.transform.position - transform.position).normalized * force;
             c.attachedRigidbody.AddForce(explosionForce, ForceMode.Impulse);
+        }
+    }
+    public void MakeSound(Collider c)
+    {
+        IHear hearable = c.GetComponent<IHear>();
+        if (hearable != null)
+        {
+            hearable.iDetectHearing(transform.position);
         }
     }
 }

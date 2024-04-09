@@ -7,6 +7,7 @@ public abstract class Projectile : MonoBehaviour
     protected Rigidbody rb;
     public float projectileSpeed;
     public float deathTime;
+    protected Controller owner;
     public virtual void Start()
     {
         Destroy(gameObject, deathTime);
@@ -19,6 +20,10 @@ public abstract class Projectile : MonoBehaviour
     public virtual void Update()
     {
         Move();
+    }
+    public virtual void SetOwner(Controller cont)
+    {
+        owner = cont;
     }
     public abstract void Move();
     public abstract void detectHitObject(Collider other);

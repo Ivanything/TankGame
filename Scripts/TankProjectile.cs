@@ -14,12 +14,10 @@ public class TankProjectile : Projectile
     {
         IDamageable damageable = hitCollider.GetComponent<IDamageable>();
         Instantiate(explosion, transform.position, Quaternion.identity);
-        if (damageable == null)
+        if (damageable != null)
         {
-            Destroy(gameObject);
-            return;
+            damageable.iDamage(damage);
         }
-        damageable.iDamage(damage);
         Destroy(gameObject);
     }
 }

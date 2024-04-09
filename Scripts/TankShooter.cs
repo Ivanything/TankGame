@@ -5,6 +5,7 @@ using UnityEngine;
 public class TankShooter : Shooter
 {
     public GameObject projectile;
+    public Controller controller;
     void Start()
     {
         
@@ -15,6 +16,10 @@ public class TankShooter : Shooter
     }
     public override void Shoot()
     {
-        Instantiate(projectile, transform.position, transform.rotation);
+        Projectile p = Instantiate(projectile, transform.position, transform.rotation).GetComponent<Projectile>();
+        if (controller)
+        {
+            p.SetOwner(controller);
+        }
     }
 }
