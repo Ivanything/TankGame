@@ -160,6 +160,7 @@ MonoBehaviour:
   moveSpeed: 0
   turnSpeed: 1
   shooter: {fileID: 1674750822058485607}
+  addedSpeed: 0
 --- !u!114 &4006327535995530078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad93dd08337874f9e49da69830586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 15
+  currentHealth: 5
   spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
   playOnDamage: {fileID: 0}
 --- !u!82 &3708017672464750372
@@ -462,3 +463,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8998439461954828247, guid: c82b6d0dfee73064c94054480965aa28, type: 3}
+  controller: {fileID: 0}

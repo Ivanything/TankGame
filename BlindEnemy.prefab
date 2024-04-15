@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 8205807524742086281}
   - component: {fileID: 3869117879446363592}
   - component: {fileID: 1783512819851913231}
-  - component: {fileID: 7911430565192294480}
   - component: {fileID: 1724421026985880883}
   - component: {fileID: 7998448183476627482}
   - component: {fileID: 229589102403482649}
   - component: {fileID: 3337589057401218047}
+  - component: {fileID: -4275379005712144772}
   m_Layer: 0
   m_Name: BlindEnemy
   m_TagString: Player
@@ -126,7 +126,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -141,7 +141,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &3869117879446363592
 MonoBehaviour:
@@ -158,6 +158,7 @@ MonoBehaviour:
   moveSpeed: 3
   turnSpeed: 2
   shooter: {fileID: 5248879453247195492}
+  addedSpeed: 0
 --- !u!114 &1783512819851913231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,20 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d38d289a10d7244bf12130c143e89b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7911430565192294480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095659636792545560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165ed2895adfb774ea215938c1732a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visionAngle: 70
-  visionRange: 8
 --- !u!114 &1724421026985880883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad93dd08337874f9e49da69830586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 15
   spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
   playOnDamage: {fileID: 0}
 --- !u!82 &7998448183476627482
@@ -325,6 +312,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &-4275379005712144772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095659636792545560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15439b786b4572b458e4b186b366031f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 2
 --- !u!1 &5602207718225794870
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,3 +370,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8998439461954828247, guid: c82b6d0dfee73064c94054480965aa28, type: 3}
+  controller: {fileID: 0}

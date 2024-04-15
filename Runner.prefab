@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1038012639029272541}
   - component: {fileID: 2071935711266275392}
   - component: {fileID: -6075526443648088566}
+  - component: {fileID: -576381651612721861}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Player
@@ -72,7 +73,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -104,6 +105,7 @@ MonoBehaviour:
   moveSpeed: 6
   turnSpeed: 4
   shooter: {fileID: 0}
+  addedSpeed: 0
 --- !u!114 &7240995684209695543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad93dd08337874f9e49da69830586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 20
+  currentHealth: 5
   spawnOnDeath: {fileID: 0}
   playOnDamage: {fileID: 0}
 --- !u!82 &1038012639029272541
@@ -271,6 +273,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &-576381651612721861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2485584349377402144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15439b786b4572b458e4b186b366031f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 2
 --- !u!1 &4712250217926905506
 GameObject:
   m_ObjectHideFlags: 0

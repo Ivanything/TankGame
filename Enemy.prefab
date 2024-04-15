@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 5792694961194366314}
   - component: {fileID: 2386963228713864161}
   - component: {fileID: 8452483968957540052}
+  - component: {fileID: -4863445376050900926}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Player
@@ -126,7 +127,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -141,7 +142,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &3742561095419094255
 MonoBehaviour:
@@ -158,6 +159,7 @@ MonoBehaviour:
   moveSpeed: 2
   turnSpeed: 2
   shooter: {fileID: 4582004344707125212}
+  addedSpeed: 0
 --- !u!114 &3557671903343130602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad93dd08337874f9e49da69830586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 20
+  currentHealth: 10
   spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
   playOnDamage: {fileID: 0}
 --- !u!82 &2386963228713864161
@@ -324,6 +326,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &-4863445376050900926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159763554034231760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15439b786b4572b458e4b186b366031f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 2
 --- !u!1 &8203915137814745167
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,3 +384,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8998439461954828247, guid: c82b6d0dfee73064c94054480965aa28, type: 3}
+  controller: {fileID: 0}

@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: -2053029776197679392}
   - component: {fileID: 427516218549503751}
   - component: {fileID: 2318329628201469558}
+  - component: {fileID: -1747414999362215640}
   m_Layer: 0
   m_Name: UATankPlayer
   m_TagString: Player
@@ -170,8 +171,8 @@ Rigidbody:
   m_GameObject: {fileID: 3524737836401214618}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.1
+  m_Drag: 0.5
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -186,7 +187,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &2332733079263978488
 MonoBehaviour:
@@ -203,6 +204,7 @@ MonoBehaviour:
   moveSpeed: 5
   turnSpeed: 3
   shooter: {fileID: 1451747877946077520}
+  addedSpeed: 0
 --- !u!114 &9164740932557787694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e65260140cf7c47b2778a92f2f56b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
 --- !u!114 &2318329628201469558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +275,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockOnInput: 304
+--- !u!114 &-1747414999362215640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524737836401214618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15439b786b4572b458e4b186b366031f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 4
