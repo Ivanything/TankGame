@@ -200,8 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 5
-  spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
-  playOnDamage: {fileID: 0}
+  spawnOnDeath: {fileID: 7308595270210242692, guid: 4549ed59baed60148be1c5305d6ccfe1, type: 3}
+  pointsOnDeath: 10
 --- !u!82 &3708017672464750372
 AudioSource:
   m_ObjectHideFlags: 0

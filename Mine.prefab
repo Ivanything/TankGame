@@ -236,4 +236,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 5482049220671776959, guid: 14d763890329b10438e84a92ea227588, type: 3}
   damage: 5
+  jump: 2
   floorPosition: -0.6

@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 10
-  spawnOnDeath: {fileID: 7308595270210242692, guid: 993e14ab744869c428097ff8c2ee8839, type: 3}
-  playOnDamage: {fileID: 0}
+  spawnOnDeath: {fileID: 7308595270210242692, guid: 4549ed59baed60148be1c5305d6ccfe1, type: 3}
+  pointsOnDeath: 50
 --- !u!82 &2386963228713864161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ AudioSource:
   m_GameObject: {fileID: 5159763554034231760}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4277925941081314384, guid: a5267e6f44f4351438135698b3b39728, type: 2}
   m_audioClip: {fileID: 8300000, guid: 21ef329d3122c3a40ae877d746a9a094, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
